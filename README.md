@@ -10,3 +10,5 @@ https://javarush.ru/quests/lectures/questmultithreading.level06.lecture15
 "Клиент в терминале" - java client.Client
 "Клиент - Бот" (умеет сообщать дату и время) - java client.BotClient
 "Клиент в графическом окне" - java client.ClientGuiController
+
+-----
