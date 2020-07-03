@@ -81,7 +81,7 @@ public class Client {
             try {
                 Socket socket = new Socket(address, port);   //17.2
                 connection = new Connection(socket);  //17.3
-                System.out.println("---Connection, socket: " + connection + ",   " + socket);
+                //System.out.println("---Connection, socket: " + connection + ",   " + socket);
                 clientHandshake();                              //17.4
                 clientMainLoop();                               //17.5
             } catch (IOException | ClassNotFoundException ex) {

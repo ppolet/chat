@@ -16,6 +16,7 @@ public class BotClient extends Client {
         @Override
         protected void clientMainLoop() throws IOException, ClassNotFoundException {
             sendTextMessage("Привет чатику. Я бот. Понимаю команды: дата, день, месяц, год, время, час, минуты, секунды.");
+            sendTextMessage("И на английском тоже ;) Понимаю команды: date, day, month, year, time, hour, minutes, seconds.");
             super.clientMainLoop();
         }
 
@@ -32,30 +33,35 @@ public class BotClient extends Client {
             String dateTimeFormat;
             switch (st[1]) {
                 case "дата":
-                    dateTimeFormat = "d.MM.YYYY";
-                    break;
                 case "date":
                     dateTimeFormat = "d.MM.YYYY";
                     break;
                 case "день":
+                case "day":
                     dateTimeFormat = "d";
                     break;
                 case "месяц":
+                case "month":
                     dateTimeFormat = "MMMM";
                     break;
                 case "год":
+                case "year":
                     dateTimeFormat = "YYYY";
                     break;
                 case "время":
+                case "time":
                     dateTimeFormat = "H:mm:ss";
                     break;
                 case "час":
+                case "hour":
                     dateTimeFormat = "H";
                     break;
                 case "минуты":
+                case "minutes":
                    dateTimeFormat = "m";
                     break;
                 case "секунды":
+                case "seconds":
                     dateTimeFormat = "s";
                     break;
                 default:
@@ -70,9 +76,6 @@ public class BotClient extends Client {
                 sendTextMessage("Информация для " + st[0] + ": " + msg);
             }
         }
-        
-        
-        
     }
 
     //18.3.1
